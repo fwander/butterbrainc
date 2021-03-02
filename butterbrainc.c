@@ -155,7 +155,6 @@ void initSpecial(){
 
 int stn(){  // string to number
   int result = 0;
-  int size = 0;
   while(isdigit(*code)){
 
     result *= 10;
@@ -173,8 +172,8 @@ int gnum(){
   char* start = code;
 
 
-  if(map[*start] != NULL){
-    map[*start](gnum());
+  if(map[(unsigned char)(*start)] != NULL){
+    map[(unsigned char)(*start)](gnum());
 	return 1;
   }
 
@@ -186,7 +185,7 @@ int gnum(){
 
 void loopP(int toomuch){
   while (code-start < toomuch-1){
-    (special[*code])();
+    (special[(unsigned char)(*code)])();
     code++;
   }
 }

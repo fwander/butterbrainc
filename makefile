@@ -2,8 +2,8 @@ CC = gcc
 RM = rm
 RM += -f
 
-build:
-	$(CC) butterbrainc.c -o bbc 
+all:
+	$(CC) butterbrainc.c -o bbc -Wall
 	chmod +x ./bbc
 
 clean:

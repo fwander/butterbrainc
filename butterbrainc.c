@@ -132,7 +132,7 @@ void cc(){
 }
 
 void a(){
-	fprintf(outfile,"mov rdx,1\nlea rcx,[rbp + r8]\nmov rbx, 1\nmov rax,4\nint 0x80\n");
+	fprintf(outfile,"mov eax, dword [rbp + r8]\n call printc\n");
 }
 
 typedef void (*spec)();

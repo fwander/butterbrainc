@@ -76,6 +76,18 @@ newline:\n\
   mov rsp, rbp\n\
   pop rbp\n\
   ret\n\
+printc:\n\
+  push rbp\n\
+  mov rbp, rsp\n\
+  push rax\n\
+  mov rax, 1\n\
+  mov rdi, 1\n\
+  mov rsi, rsp\n\
+  mov rdx, 1\n\
+  syscall\n\
+  mov rsp, rbp\n\
+  pop rbp\n\
+  ret\n\
 \n\
 \n\
 \n\

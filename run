@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+
+./bbc $1 $2
+nasm -f elf64 out.s
+ld out.o
+./a.out
